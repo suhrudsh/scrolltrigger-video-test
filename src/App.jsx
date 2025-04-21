@@ -16,7 +16,9 @@ export default function App() {
 	useEffect(() => {
 		for (let i = 1; i <= totalFrames; i++) {
 			const img = new Image();
-			img.src = `/${i.toString().padStart(4, "0")}.webp`; // public/0001.webp etc.
+			img.src = `/scrolltrigger-video-test/${i
+				.toString()
+				.padStart(4, "0")}.webp`;
 			imagesRef.current.push(img);
 		}
 		// once the first frame is loaded, draw it
