@@ -1,12 +1,38 @@
-# React + Vite
+# ScrollTrigger Video Test
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is an experiment using [GSAP's ScrollTrigger](https://greensock.com/scrolltrigger/) to create a scroll-controlled video playback effect using a `<canvas>` element.
 
-Currently, two official plugins are available:
+As the user scrolls, a sequence of pre-rendered images is drawn to a canvas, simulating a frame-by-frame video.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Scroll-based frame-by-frame animation using GSAP ScrollTrigger  
+- Responsive full-screen canvas  
+- Image preloading for smooth playback  
+- Sticky canvas that stays fixed while scrolling
+
+---
+
+## Technologies
+
+- React  
+- GSAP + ScrollTrigger  
+- HTML Canvas API
+
+---
+
+## How It Works
+
+1. Preloads 68 `.webp` images as frames.
+2. As the user scrolls, the correct frame is drawn to the canvas based on scroll progress.
+3. The canvas resizes to fill the viewport and stays sticky during the scroll interaction.
+
+---
+
+## Setup
+
+```bash
+npm install
+npm run dev
